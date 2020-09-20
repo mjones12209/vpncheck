@@ -1,0 +1,9 @@
+#/etc/systemd/system/test.service
+
+[Unit]
+Description=Service for vpncheck script
+
+[Service]
+User=root
+Type=oneshot
+ExecStart=/bin/bash /usr/bin/vpncheck.sh

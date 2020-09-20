@@ -1,0 +1,12 @@
+
+#/etc/systemd/system/test.timer
+
+[Unit]
+Description=Timer for vpncheck
+
+[Timer]
+OnUnitActiveSec=2m
+OnBootSec=2m
+
+[Install]
+WantedBy=timers.target
