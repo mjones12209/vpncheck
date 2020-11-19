@@ -7,7 +7,7 @@ systemctl status openvpn-client@nyc > /tmp/vpncheck
 #$vpnCheck="/tmp/vpncheck"
 
         #check for errors and if so notify user and kill transmission
-	if ( $( grep -qi "error" "/tmp/vpncheck" ) ); then
+	if ( $( grep -qi "error" "/tmp/vpncheck" ) || $( grep -qi "sigterm" "/tmp/vpncheck" ) ); then
 		zenity --error --height=100 --width=200 --text="<span>OpenVPN Service has Errors, Transmission killed</span>" --title="Systemctl - Error" --ok-label="Ok"
 		pkill -9 $(pidof transmission-gtk)
 		systemctl stop transmission-daemon
