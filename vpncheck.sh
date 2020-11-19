@@ -12,7 +12,7 @@ systemctl status openvpn-client@nyc > /tmp/vpncheck
 		pkill -9 $(pidof transmission-gtk)
 		systemctl stop transmission-daemon
 		systemctl stop transmission
-        kill $(pgrep kodi)
+        kill -9 $(pgrep kodi)
 	fi
 
 
