@@ -5,8 +5,8 @@
 Description=Timer for vpncheck
 
 [Timer]
-OnUnitActiveSec=2m
-OnBootSec=2m
+OnUnitActiveSec=1m
+OnBootSec=1m
 
 [Install]
 WantedBy=timers.target
