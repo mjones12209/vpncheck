@@ -1,3 +1,4 @@
+  GNU nano 4.8                                                                         /usr/bin/vpncheck.sh                                                                                   
 #!/bin/bash
 
 #run status of vpn put output in /tmp/vpncheck
